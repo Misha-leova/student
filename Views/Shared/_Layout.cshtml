@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lumea Jucăriilor</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lumea-jucariilor.styles.css" asp-append-version="true" />
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFE66D;
+            --dark-color: #292F36;
+            --light-color: #F7FFF7;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color) !important;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .nav-link:hover {
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: var(--secondary-color);
+            color: white !important;
+            padding: 20px 0;
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .footer a {
+            color: var(--accent-color) !important;
+        }
+
+        .hero-section {
+            background-color: var(--secondary-color);
+            padding: 60px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .category-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-toy {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 25px;
+            padding: 8px 25px;
+            font-weight: bold;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-toy:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-teddy-bear mr-2"></i> Lumea Jucăriilor
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Categorii">Categorii</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Noutati">Noutăți</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Promotii">Promoții</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contacte">Contacte</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a class="btn btn-toy me-2" asp-controller="Account" asp-action="Login">
+                            <i class="fas fa-user"></i> Contul meu
+                        </a>
+                        <a class="btn btn-toy" asp-controller="Cart" asp-action="Index">
+                            <i class="fas fa-shopping-cart"></i> Coș
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Lumea Jucăriilor</h5>
+                    <p>Locul perfect pentru a găsi bucurie și distracție pentru copilul tău!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Link-uri rapide</h5>
+                    <ul class="list-unstyled">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Despre">Despre noi</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Politica de confidențialitate</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Livrare">Livrare și Returnare</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="FAQ">Întrebări frecvente</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contactează-ne</h5>
+                    <address>
+                        <strong>Adresă:</strong> Strada Jucăriilor nr. 123, București<br>
+                        <strong>Telefon:</strong> 0712 345 678<br>
+                        <strong>Email:</strong> <a href="mailto:contact@lumeajucariilor.ro">contact@lumeajucariilor.ro</a>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="d-flex justify-content-between">
+                <div>
+                    &copy; 2025 - Lumea Jucăriilor - Toate drepturile rezervate
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

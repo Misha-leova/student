@@ -1,0 +1,428 @@
+﻿
+<style>
+    :root {
+        --primary-color: #4e73df;
+        --secondary-color: #f8f9fc;
+        --accent-color: #ffd166;
+    }
+
+    .divider-toy {
+        height: 4px;
+        width: 80px;
+        background-color: var(--accent-color);
+    }
+
+    .promo-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+
+        .promo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+    .promo-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--accent-color);
+        color: #333;
+        padding: 5px 10px;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .promo-img {
+        height: 200px;
+        object-fit: contain;
+        background-color: #f8f9fc;
+        padding: 20px;
+    }
+
+    .timer-badge {
+        background-color: #e74a3b;
+        color: white;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .price-old {
+        text-decoration: line-through;
+        color: #858796;
+    }
+
+    .price-new {
+        color: #e74a3b;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .promo-filter {
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background-color: var(--secondary-color);
+        transition: all 0.3s ease;
+    }
+
+        .promo-filter.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+    .banner-promo {
+        background: linear-gradient(45deg, var(--primary-color), #7c92e7);
+        color: white;
+    }
+</style>
+
+    <!-- Aici ar veni headerul site-ului -->
+
+    <div class="container py-5">
+        <!-- Banner promoțional -->
+        <div class="banner-promo p-4 rounded-4 mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="fw-bold mb-3">Promoții și Oferte Speciale</h1>
+                    <p class="fs-5 mb-0">Descoperă reducerile și ofertele noastre limitate pentru cele mai populare jucării.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="bg-white text-dark p-3 rounded-3 d-inline-block">
+                        <p class="mb-1 fs-5">Ofertă de sezon:</p>
+                        <h3 class="mb-0 text-primary">Până la -50%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtre pentru promoții -->
+        <div class="mb-4">
+            <div class="section-header mb-3">
+                <h2 class="h4">Filtrează ofertele</h2>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="promo-filter active" data-filter="toate">Toate ofertele</span>
+                <span class="promo-filter" data-filter="reduceri">Reduceri</span>
+                <span class="promo-filter" data-filter="lichidari">Lichidări de stoc</span>
+                <span class="promo-filter" data-filter="2plus1">2+1 Gratuit</span>
+                <span class="promo-filter" data-filter="ultimele">Ultimele bucăți</span>
+            </div>
+        </div>
+
+        <!-- Promoții săptămânale -->
+        <section class="mb-5">
+            <div class="section-header mb-4">
+                <h2 class="display-6 fw-bold">Promoții săptămânale</h2>
+                <div class="divider-toy my-3"></div>
+                <p class="text-muted">Oferte valabile până duminică!</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Promo Item 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/300/300" alt="Produs în promoție" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-30%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-light text-dark">Categoria jucăriei</span>
+                                <span class="timer-badge"><i class="fas fa-clock me-1"></i> 2 zile</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie în promoție</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">199 Lei</span>
+                                <span class="price-new">139 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Item 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/300/300" alt="Produs în promoție" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-40%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-light text-dark">Categoria jucăriei</span>
+                                <span class="timer-badge"><i class="fas fa-clock me-1"></i> 3 zile</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie în promoție</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">299 Lei</span>
+                                <span class="price-new">179 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Item 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/300/300" alt="Produs în promoție" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-25%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-light text-dark">Categoria jucăriei</span>
+                                <span class="timer-badge"><i class="fas fa-clock me-1"></i> 1 zi</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie în promoție</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">149 Lei</span>
+                                <span class="price-new">112 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oferte speciale -->
+        <section class="mb-5">
+            <div class="section-header mb-4">
+                <h2 class="display-6 fw-bold">Oferte speciale</h2>
+                <div class="divider-toy my-3"></div>
+                <p class="text-muted">Pachete la preț avantajos și oferte combinate</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Oferta specială 1 -->
+                <div class="col-md-6">
+                    <div class="promo-card">
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <img src="/api/placeholder/400/400" alt="Ofertă specială" class="img-fluid h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="col-7">
+                                <div class="p-3">
+                                    <div class="mb-2">
+                                        <span class="badge bg-warning text-dark">2+1 GRATUIT</span>
+                                    </div>
+                                    <h3 class="h5 mb-3">Pachet jucării creative</h3>
+                                    <p class="mb-3">Cumpără două seturi și al treilea este gratuit!</p>
+                                    <div class="mb-3">
+                                        <span class="price-new">de la 99 Lei</span>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary">Vezi oferta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oferta specială 2 -->
+                <div class="col-md-6">
+                    <div class="promo-card">
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <img src="/api/placeholder/400/400" alt="Ofertă specială" class="img-fluid h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="col-7">
+                                <div class="p-3">
+                                    <div class="mb-2">
+                                        <span class="badge bg-info text-dark">PACHET ECONOMIC</span>
+                                    </div>
+                                    <h3 class="h5 mb-3">Set jucării educaționale</h3>
+                                    <p class="mb-3">Economisește 40% cu pachetul complet!</p>
+                                    <div class="mb-3">
+                                        <span class="price-old me-2">350 Lei</span>
+                                        <span class="price-new">199 Lei</span>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary">Vezi oferta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lichidări de stoc -->
+        <section class="mb-5">
+            <div class="section-header mb-4">
+                <h2 class="display-6 fw-bold">Lichidări de stoc</h2>
+                <div class="divider-toy my-3"></div>
+                <p class="text-muted">Ultimele bucăți disponibile la prețuri reduse</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Lichidare Item 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/250/250" alt="Produs lichidare" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-60%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Ultimele 3 bucăți</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie lichidare</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">250 Lei</span>
+                                <span class="price-new">99 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lichidare Item 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/250/250" alt="Produs lichidare" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-50%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Ultima bucată</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie lichidare</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">200 Lei</span>
+                                <span class="price-new">99 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lichidare Item 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/250/250" alt="Produs lichidare" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-45%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Ultimele 2 bucăți</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie lichidare</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">180 Lei</span>
+                                <span class="price-new">99 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lichidare Item 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="promo-card">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/250/250" alt="Produs lichidare" class="promo-img img-fluid w-100">
+                            <span class="promo-badge">-55%</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Ultimele 5 bucăți</span>
+                            </div>
+                            <h3 class="h5 mb-2">Nume jucărie lichidare</h3>
+                            <div class="mb-3">
+                                <span class="price-old me-2">220 Lei</span>
+                                <span class="price-new">99 Lei</span>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter pentru promoții -->
+        <section class="mb-5">
+            <div class="p-4 rounded-4" style="background-color: var(--accent-color);">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h2 class="h3 fw-bold mb-3">Abonează-te pentru cele mai bune oferte!</h2>
+                        <p class="mb-4">Primește notificări despre promoțiile viitoare și ofertele exclusive pentru abonați.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Adresa ta de email" aria-label="Adresa ta de email">
+                            <button class="btn btn-dark" type="button">Abonează-te</button>
+                        </div>
+                        <div class="form-text">Nu trimitem spam. Te poți dezabona oricând.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Aici ar veni footerul site-ului -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>// Script pentru filtrele de promoții
+        document.addEventListener('DOMContentLoaded', function() {
+            const filters = document.querySelectorAll('.promo-filter');
+
+            filters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    // Elimină clasa active de pe toate filtrele
+                    filters.forEach(f => f.classList.remove('active'));
+
+                    // Adaugă clasa active pe filtrul curent
+                    this.classList.add('active');
+
+                    // Aici ar veni logica pentru filtrarea produselor
+                    // În funcție de tipul de date din back-end
+                    const filterType = this.getAttribute('data-filter');
+                    console.log('Filtru selectat:', filterType);
+
+                    // Exemplu de implementare:
+                    // fetchPromotions(filterType);
+                });
+            });
+
+            // Funcție care ar putea fi folosită pentru a încărca promoțiile filtrate
+            // function fetchPromotions(filterType) {
+            //     fetch(`/api/promotions?type=${filterType}`)
+            //         .then(response => response.json())
+            //         .then(data => {
+            //             // Actualizează conținutul paginii cu datele primite
+            //         })
+            //         .catch(error => console.error('Error fetching promotions:', error));
+            // }
+
+            // Simulare countdown pentru timer
+            const timerElements = document.querySelectorAll('.timer-badge');
+
+            // Aici ar veni logica pentru actualizarea timer-elor
+            // De exemplu, actualizare la fiecare minut
+            // setInterval(updateTimers, 60000);
+        });</script>

@@ -1,0 +1,391 @@
+﻿@{
+    ViewData["Title"] = "Contacte";
+}
+
+<div class="contact-header py-4 mb-5" style="background-color: var(--secondary-color); border-radius: 15px; position: relative; overflow: hidden;">
+    <div class="container text-center text-white py-4">
+        <h1 class="display-4 fw-bold">Contactează-ne</h1>
+        <p class="lead">Suntem aici pentru a-ți răspunde la orice întrebare despre jucăriile noastre!</p>
+
+        <!-- Elemente decorative -->
+        <div class="position-absolute" style="top: 20px; left: 20px; transform: rotate(-15deg);">
+            <i class="fas fa-rocket fa-3x text-white opacity-50"></i>
+        </div>
+        <div class="position-absolute" style="bottom: 20px; right: 30px; transform: rotate(10deg);">
+            <i class="fas fa-teddy-bear fa-3x text-white opacity-50"></i>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Informații de contact -->
+        <div class="col-lg-4 mb-4">
+            <div class="contact-info-card p-4" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h3 class="mb-4 fw-bold" style="color: var(--primary-color);">Informații de Contact</h3>
+
+                <div class="contact-item d-flex align-items-center mb-4">
+                    <div class="contact-icon me-3" style="width: 50px; height: 50px; background-color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-map-marker-alt fa-lg" style="color: var(--dark-color);"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Adresa noastră</h5>
+                        <p class="mb-0">Strada Jucăriilor nr. 123<br>Sector 1, București, 010101</p>
+                    </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-center mb-4">
+                    <div class="contact-icon me-3" style="width: 50px; height: 50px; background-color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-phone-alt fa-lg" style="color: var(--dark-color);"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Telefon</h5>
+                        <p class="mb-0">Relații clienți: 0712 345 678<br>Comenzi: 0712 345 679</p>
+                    </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-center mb-4">
+                    <div class="contact-icon me-3" style="width: 50px; height: 50px; background-color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-envelope fa-lg" style="color: var(--dark-color);"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Email</h5>
+                        <p class="mb-0">
+                            <a href="mailto:contact@lumeajucariilor.ro" style="color: var(--primary-color); text-decoration: none;">contact@lumeajucariilor.ro</a><br>
+                            <a href="mailto:comenzi@lumeajucariilor.ro" style="color: var(--primary-color); text-decoration: none;">comenzi@lumeajucariilor.ro</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-center">
+                    <div class="contact-icon me-3" style="width: 50px; height: 50px; background-color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-clock fa-lg" style="color: var(--dark-color);"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Program</h5>
+                        <p class="mb-0">
+                            Luni - Vineri: 09:00 - 20:00<br>
+                            Sâmbătă: 10:00 - 18:00<br>
+                            Duminică: 10:00 - 16:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formular de contact -->
+        <div class="col-lg-8 mb-4">
+            <div class="contact-form-card p-4" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-4 fw-bold" style="color: var(--primary-color);">Trimite-ne un mesaj</h3>
+
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label fw-bold">Numele tău</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--accent-color); border: none;">
+                                    <i class="fas fa-user" style="color: var(--dark-color);"></i>
+                                </span>
+                                <input type="text" class="form-control" id="name" placeholder="Nume și prenume" required style="border: 2px solid var(--secondary-color); border-left: none; padding: 10px;">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--accent-color); border: none;">
+                                    <i class="fas fa-envelope" style="color: var(--dark-color);"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="email@exemplu.ro" required style="border: 2px solid var(--secondary-color); border-left: none; padding: 10px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label fw-bold">Telefon</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--accent-color); border: none;">
+                                    <i class="fas fa-phone" style="color: var(--dark-color);"></i>
+                                </span>
+                                <input type="tel" class="form-control" id="phone" placeholder="07XX XXX XXX" style="border: 2px solid var(--secondary-color); border-left: none; padding: 10px;">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="subject" class="form-label fw-bold">Subiect</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--accent-color); border: none;">
+                                    <i class="fas fa-tag" style="color: var(--dark-color);"></i>
+                                </span>
+                                <select class="form-select" id="subject" required style="border: 2px solid var(--secondary-color); border-left: none; padding: 10px;">
+                                    <option value="" selected disabled>Alege un subiect</option>
+                                    <option value="comanda">Întrebare despre comandă</option>
+                                    <option value="produs">Informații despre produs</option>
+                                    <option value="reclamatie">Reclamație</option>
+                                    <option value="colaborare">Propunere de colaborare</option>
+                                    <option value="altele">Altele</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label fw-bold">Mesajul tău</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Scrie-ne mesajul tău aici..." required style="border: 2px solid var(--secondary-color); padding: 10px;"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="privacy" required style="border: 2px solid var(--secondary-color);">
+                        <label class="form-check-label" for="privacy">Am citit și sunt de acord cu <a href="/privacy" style="color: var(--primary-color);">Politica de confidențialitate</a></label>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg" style="background-color: var(--primary-color); color: white; border-radius: 30px; padding: 10px 40px; font-weight: bold; border: none; transition: all 0.3s;">
+                            <i class="fas fa-paper-plane me-2"></i> Trimite mesajul
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hartă și Detalii Magazin -->
+    <div class="row mt-4 mb-5">
+        <div class="col-12">
+            <div class="map-container p-4" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-4 fw-bold" style="color: var(--primary-color);">Vizitează-ne la magazin</h3>
+
+                <div class="row">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <div class="map-frame" style="height: 400px; border-radius: 10px; overflow: hidden; border: 3px solid var(--accent-color);">
+                            <!-- Placeholder pentru hartă (într-un site real ar fi un iframe cu Google Maps) -->
+                            <div style="width: 100%; height: 100%; background-color: #eaeaea; display: flex; align-items: center; justify-content: center;">
+                                <p style="font-size: 18px; color: #666;">Aici ar fi afișată harta Google Maps cu locația magazinului</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="store-info h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 style="color: var(--secondary-color);">Magazinul nostru</h4>
+                                <p>Vino să ne vizitezi la magazinul nostru din București! Copilul tău va fi întâmpinat de o lume magică plină de jucării pentru toate vârstele.</p>
+
+                                <h5 class="mt-4" style="color: var(--secondary-color);">Facilități:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Parcare gratuită</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Zonă de joacă pentru copii</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Testare jucării</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Consultanță specializată</li>
+                                    <li><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Împachetare cadouri</li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="btn mt-3" style="background-color: var(--secondary-color); color: white; border-radius: 30px; padding: 10px 20px; font-weight: bold; border: none; transition: all 0.3s;">
+                                <i class="fas fa-directions me-2"></i> Indicații de orientare
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Întrebări frecvente -->
+    <div class="row mt-4 mb-5">
+        <div class="col-12">
+            <div class="faq-container p-4" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-4 fw-bold" style="color: var(--primary-color);">Întrebări frecvente</h3>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; border: none; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background-color: var(--light-color);">
+                                Care este termenul de livrare pentru produsele comandate online?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Livrarea se face în 24-48 de ore în București și în 2-5 zile lucrătoare în restul țării, în funcție de disponibilitatea produselor și de transportator. Pentru fiecare comandă veți primi un email cu detalii despre livrare și un cod de urmărire.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; border: none; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background-color: var(--light-color);">
+                                Cum pot returna un produs?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Aveți dreptul la retur în termen de 14 zile calendaristice de la primirea produsului. Pentru a iniția procesul de retur, vă rugăm să ne contactați telefonic sau prin email, iar un reprezentant vă va ghida prin pașii necesari. Produsul trebuie să fie în starea originală, nefolosit și cu ambalajul intact.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; border: none; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background-color: var(--light-color);">
+                                Oferiți reduceri pentru aniversări?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Da, oferim un voucher special de 10% reducere pentru ziua de naștere a copilului. Pentru a beneficia de această reducere, vă rugăm să vă înregistrați în contul dvs. data aniversării copilului cu cel puțin o săptămână înainte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" style="border-radius: 10px; overflow: hidden; border: none; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background-color: var(--light-color);">
+                                Cum pot afla dacă o jucărie este potrivită pentru vârsta copilului meu?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Pe pagina fiecărui produs veți găsi informații despre intervalul de vârstă recomandat. De asemenea, puteți contacta echipa noastră de consultanți care vă pot oferi recomandări personalizate în funcție de vârsta, interesele și abilitățile copilului dvs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p>Nu ai găsit răspunsul la întrebarea ta? Contactează-ne direct!</p>
+                    <a href="#contactForm" class="btn" style="background-color: var(--accent-color); color: var(--dark-color); border-radius: 30px; padding: 10px 30px; font-weight: bold; border: none; transition: all 0.3s;">
+                        <i class="fas fa-question-circle me-2"></i> Întreabă-ne
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Echipa noastră -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="team-container p-4" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-4 fw-bold text-center" style="color: var(--primary-color);">Echipa noastră de specialiști</h3>
+                <p class="text-center mb-5">Suntem aici pentru a te ajuta să găsești jucăria perfectă pentru copilul tău!</p>
+
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="team-member text-center">
+                            <div class="team-img-container mb-3" style="width: 150px; height: 150px; margin: 0 auto; background-color: #eaeaea; border-radius: 50%; overflow: hidden; border: 5px solid var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-4x" style="color: #999;"></i>
+                            </div>
+                            <h5 style="color: var(--secondary-color);">Maria Popescu</h5>
+                            <p class="mb-1" style="color: var(--primary-color); font-weight: bold;">Manager Magazin</p>
+                            <p class="small mb-3">Cu peste 10 ani de experiență în domeniul jucăriilor</p>
+                            <a href="mailto:maria@lumeajucariilor.ro" class="btn btn-sm" style="background-color: var(--accent-color); color: var(--dark-color); border-radius: 20px;">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="team-member text-center">
+                            <div class="team-img-container mb-3" style="width: 150px; height: 150px; margin: 0 auto; background-color: #eaeaea; border-radius: 50%; overflow: hidden; border: 5px solid var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-4x" style="color: #999;"></i>
+                            </div>
+                            <h5 style="color: var(--secondary-color);">Alexandru Ionescu</h5>
+                            <p class="mb-1" style="color: var(--primary-color); font-weight: bold;">Consultant Vânzări</p>
+                            <p class="small mb-3">Specialist în jucării educative și STEM</p>
+                            <a href="mailto:alex@lumeajucariilor.ro" class="btn btn-sm" style="background-color: var(--accent-color); color: var(--dark-color); border-radius: 20px;">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="team-member text-center">
+                            <div class="team-img-container mb-3" style="width: 150px; height: 150px; margin: 0 auto; background-color: #eaeaea; border-radius: 50%; overflow: hidden; border: 5px solid var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-4x" style="color: #999;"></i>
+                            </div>
+                            <h5 style="color: var(--secondary-color);">Elena Dumitrescu</h5>
+                            <p class="mb-1" style="color: var(--primary-color); font-weight: bold;">Relații cu Clienții</p>
+                            <p class="small mb-3">Dedicată să ofere cea mai bună experiență clienților noștri</p>
+                            <a href="mailto:elena@lumeajucariilor.ro" class="btn btn-sm" style="background-color: var(--accent-color); color: var(--dark-color); border-radius: 20px;">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="team-member text-center">
+                            <div class="team-img-container mb-3" style="width: 150px; height: 150px; margin: 0 auto; background-color: #eaeaea; border-radius: 50%; overflow: hidden; border: 5px solid var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-4x" style="color: #999;"></i>
+                            </div>
+                            <h5 style="color: var(--secondary-color);">Mihai Stanescu</h5>
+                            <p class="mb-1" style="color: var(--primary-color); font-weight: bold;">Specialist Logistică</p>
+                            <p class="small mb-3">Se asigură că toate comenzile ajung la timp și în siguranță</p>
+                            <a href="mailto:mihai@lumeajucariilor.ro" class="btn btn-sm" style="background-color: var(--accent-color); color: var(--dark-color); border-radius: 20px;">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter și Social Media -->
+    <div class="row mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="newsletter-container p-4 h-100" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-3 fw-bold" style="color: var(--primary-color);">Abonează-te la newsletter</h3>
+                <p class="mb-4">Primește cele mai noi oferte, promoții și noutăți direct în inbox-ul tău!</p>
+
+                <form id="newsletterForm" class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Adresa ta de email" style="border: 2px solid var(--secondary-color); padding: 10px; border-radius: 30px 0 0 30px;">
+                        <button class="btn" type="submit" style="background-color: var(--primary-color); color: white; border-radius: 0 30px 30px 0; border: 2px solid var(--primary-color);">
+                            <i class="fas fa-paper-plane me-2"></i> Abonare
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletter-privacy" required style="border: 2px solid var(--secondary-color);">
+                    <label class="form-check-label small" for="newsletter-privacy">
+                        Sunt de acord cu <a href="/privacy" style="color: var(--primary-color);">Politica de confidențialitate</a> și doresc să primesc comunicări de marketing.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="social-container p-4 h-100" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 class="mb-3 fw-bold" style="color: var(--primary-color);">Urmărește-ne pe social media</h3>
+                <p class="mb-4">Rămâi conectat la lumea jucăriilor și află primul despre noile produse și evenimentele noastre!</p>
+
+                <div class="row text-center">
+                    <div class="col-3">
+                        <a href="#" class="social-link" style="display: inline-block; text-decoration: none;">
+                            <div class="social-icon mb-2" style="width: 60px; height: 60px; background-color: #3b5998; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s;">
+                                <i class="fab fa-facebook-f fa-2x" style="color: white;"></i>
+                            </div>
+                            <p style="color: var(--dark-color); font-weight: bold;">Facebook</p>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="#" class="social-link" style="display: inline-block; text-decoration: none;">
+                            <div class="social-icon mb-2" style="width: 60px; height: 60px; background-color: #e1306c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s;">
+                                <i class="fab fa-instagram fa-2x" style="color: white;"></i>
+                            </div>
+                            <p style="color: var(--dark-color); font-weight: bold;">Instagram</p>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="#" class="social-link" style="display: inline-block; text-decoration: none;">
+                            <div class="social-icon mb-2" style="width: 60px; height: 60px; background-color: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s;">
+                                <i class="fab fa-youtube fa-2x" style="color: white;"></i>
+                            </div>
+                            <p style="color: var(--dark-color); font-weight: bold;">YouTube</p>
+                        </a>
+                    </div>
+
+                   

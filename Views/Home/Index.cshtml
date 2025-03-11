@@ -1,9 +1,456 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Acasă";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>This is a test for git hub </p>
+<!-- Secțiunea Hero cu carusel -->
+<div class="hero-carousel mb-5">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner rounded-4 shadow-lg">
+            <div class="carousel-item active">
+                <div class="carousel-overlay"></div>
+                <img src="/api/placeholder/1200/400" class="d-block w-100" alt="Jucării pentru toate vârstele">
+                <div class="carousel-caption">
+                    <h2 class="display-4 fw-bold">Bine ai venit în Lumea Jucăriilor!</h2>
+                    <p class="fs-5">Descoperă bucuria și magia jucăriilor care inspiră imaginația!</p>
+                    <a href="#categorii" class="btn btn-toy btn-lg mt-3">Explorează jucăriile</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-overlay"></div>
+                <img src="/api/placeholder/1200/400" class="d-block w-100" alt="Promoții speciale">
+                <div class="carousel-caption">
+                    <h2 class="display-4 fw-bold">Promoții Speciale!</h2>
+                    <p class="fs-5">Reduceri de până la 50% la jucăriile educative!</p>
+                    <a href="#promotii" class="btn btn-toy btn-lg mt-3">Vezi ofertele</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-overlay"></div>
+                <img src="/api/placeholder/1200/400" class="d-block w-100" alt="Noutăți">
+                <div class="carousel-caption">
+                    <h2 class="display-4 fw-bold">Colecția de Primăvară 2025</h2>
+                    <p class="fs-5">Descoperă cele mai noi jucării sosite în magazinul nostru!</p>
+                    <a href="#noutati" class="btn btn-toy btn-lg mt-3">Descoperă noutățile</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Înapoi</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Înainte</span>
+        </button>
+    </div>
 </div>
+
+<!-- Categorii de jucării -->
+<section id="categorii" class="mb-5">
+    <div class="section-header text-center mb-4">
+        <h2 class="display-5 fw-bold">Categorii de Jucării</h2>
+        <p class="text-muted">Găsește jucăria perfectă pentru fiecare vârstă și preferință</p>
+        <div class="divider-toy my-3 mx-auto"></div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Jucării pentru bebeluși">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jucării pentru bebeluși</h3>
+                    <p class="card-text">Jucării moi, sigure și stimulative pentru cei mai mici membri ai familiei.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Jucării educative">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jucării educative</h3>
+                    <p class="card-text">Dezvoltă abilitățile copilului tău prin joacă și învățare interactivă.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Jocuri de societate">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jocuri de societate</h3>
+                    <p class="card-text">Distrează-te împreună cu familia și prietenii cu jocuri interactive.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Figurine și seturi de joacă">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Figurine și seturi</h3>
+                    <p class="card-text">Colecții de personaje și seturi pentru aventuri magice în lumea imaginației.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Jucării de exterior">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jucării de exterior</h3>
+                    <p class="card-text">Promovează activitatea fizică cu jucării pentru curte, parc sau grădină.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-card h-100">
+                <img src="/api/placeholder/400/250" class="card-img-top" alt="Jucării creative">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jucării creative</h3>
+                    <p class="card-text">Stimulează creativitatea prin artă, modelaj și activități DIY.</p>
+                    <a href="#" class="btn btn-toy">Explorează</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Produse populare -->
+<section id="produse-populare" class="mb-5 py-4 rounded-4" style="background-color: var(--light-color);">
+    <div class="section-header text-center mb-4">
+        <h2 class="display-5 fw-bold">Produse Populare</h2>
+        <p class="text-muted">Cele mai iubite jucării de copiii din întreaga țară</p>
+        <div class="divider-toy my-3 mx-auto"></div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-6 col-md-3">
+            <div class="product-card h-100 shadow-sm">
+                <div class="product-badge bg-danger text-white">-30%</div>
+                <img src="/api/placeholder/300/300" class="card-img-top" alt="Set de construcție">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Set de construcție premium</h4>
+                    <div class="rating mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <span class="ms-1">(127)</span>
+                    </div>
+                    <div class="price-container mb-3">
+                        <span class="old-price text-muted text-decoration-line-through">299 Lei</span>
+                        <span class="current-price fw-bold ms-2">209 Lei</span>
+                    </div>
+                    <a href="#" class="btn btn-toy w-100"><i class="fas fa-shopping-cart me-2"></i> Adaugă în coș</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="product-card h-100 shadow-sm">
+                <div class="product-badge bg-primary text-white">Nou!</div>
+                <img src="/api/placeholder/300/300" class="card-img-top" alt="Păpușă interactivă">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Păpușă interactivă</h4>
+                    <div class="rating mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <span class="ms-1">(89)</span>
+                    </div>
+                    <div class="price-container mb-3">
+                        <span class="current-price fw-bold">179 Lei</span>
+                    </div>
+                    <a href="#" class="btn btn-toy w-100"><i class="fas fa-shopping-cart me-2"></i> Adaugă în coș</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="product-card h-100 shadow-sm">
+                <img src="/api/placeholder/300/300" class="card-img-top" alt="Joc de societate">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Joc de societate familie</h4>
+                    <div class="rating mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <span class="ms-1">(64)</span>
+                    </div>
+                    <div class="price-container mb-3">
+                        <span class="current-price fw-bold">149 Lei</span>
+                    </div>
+                    <a href="#" class="btn btn-toy w-100"><i class="fas fa-shopping-cart me-2"></i> Adaugă în coș</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="product-card h-100 shadow-sm">
+                <div class="product-badge bg-success text-white">Bestseller</div>
+                <img src="/api/placeholder/300/300" class="card-img-top" alt="Robot interactiv">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Robot interactiv</h4>
+                    <div class="rating mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <span class="ms-1">(213)</span>
+                    </div>
+                    <div class="price-container mb-3">
+                        <span class="current-price fw-bold">249 Lei</span>
+                    </div>
+                    <a href="#" class="btn btn-toy w-100"><i class="fas fa-shopping-cart me-2"></i> Adaugă în coș</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-toy btn-lg">Vezi toate produsele <i class="fas fa-arrow-right ms-2"></i></a>
+    </div>
+</section>
+
+<!-- Promoții speciale -->
+<section id="promotii" class="mb-5">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="promo-card shadow">
+                <img src="/api/placeholder/600/300" class="w-100 rounded-4" alt="Promoție jucării educative">
+                <div class="promo-content">
+                    <h3 class="fw-bold">Jucării educative</h3>
+                    <p class="fs-5">Reduceri de până la 40%</p>
+                    <a href="#" class="btn btn-toy">Cumpără acum</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="promo-card shadow">
+                <img src="/api/placeholder/600/300" class="w-100 rounded-4" alt="Promoție jucării de exterior">
+                <div class="promo-content">
+                    <h3 class="fw-bold">Jucării de exterior</h3>
+                    <p class="fs-5">De la 99 Lei</p>
+                    <a href="#" class="btn btn-toy">Cumpără acum</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recenzii și testimoniale -->
+<section id="recenzii" class="mb-5 py-4 rounded-4 text-center" style="background-color: var(--secondary-color); color: white;">
+    <div class="section-header mb-4">
+        <h2 class="display-5 fw-bold">Ce spun clienții noștri</h2>
+        <div class="divider-toy bg-white my-3 mx-auto"></div>
+    </div>
+
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Produse de calitate excepțională și o livrare rapidă. Copilul meu adoră setul de construcție! Vom reveni cu siguranță."</p>
+                    <div class="testimonial-author">
+                        <h5 class="mb-0">Ana Popescu</h5>
+                        <small>București</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Serviciu clienți impecabil! Jucăriile educative cumpărate au depășit așteptările și au un raport calitate-preț excelent."</p>
+                    <div class="testimonial-author">
+                        <h5 class="mb-0">Mihai Ionescu</h5>
+                        <small>Cluj-Napoca</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Echipa magazinului a fost foarte de ajutor în alegerea cadoului perfect pentru nepoata mea. Recomand cu încredere!"</p>
+                    <div class="testimonial-author">
+                        <h5 class="mb-0">Elena Dumitrescu</h5>
+                        <small>Timișoara</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter și abonare -->
+<section id="newsletter" class="newsletter-section mb-5 p-4 rounded-4 text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="fw-bold mb-3">Abonează-te la newsletter</h3>
+                <p class="mb-4">Fii la curent cu cele mai noi jucării și oferte speciale</p>
+                <form class="newsletter-form d-flex justify-content-center">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Adresa ta de email" aria-label="Email address">
+                        <button class="btn btn-toy" type="submit">Abonează-te</button>
+                    </div>
+                </form>
+                <small class="text-muted">Ne angajăm să nu distribuim datele tale și să nu trimitem spam. Te poți dezabona oricând.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Beneficii -->
+<section id="beneficii" class="mb-5">
+    <div class="row g-4 text-center">
+        <div class="col-md-3">
+            <div class="benefit-card p-3">
+                <div class="benefit-icon mb-3">
+                    <i class="fas fa-truck fs-1 text-primary"></i>
+                </div>
+                <h4>Livrare rapidă</h4>
+                <p>Oriunde în țară în 24-48 de ore</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="benefit-card p-3">
+                <div class="benefit-icon mb-3">
+                    <i class="fas fa-shield-alt fs-1 text-primary"></i>
+                </div>
+                <h4>Calitate garantată</h4>
+                <p>Toate jucăriile respectă standardele UE</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="benefit-card p-3">
+                <div class="benefit-icon mb-3">
+                    <i class="fas fa-undo-alt fs-1 text-primary"></i>
+                </div>
+                <h4>Retur gratuit</h4>
+                <p>30 de zile pentru retur fără explicații</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="benefit-card p-3">
+                <div class="benefit-icon mb-3">
+                    <i class="fas fa-headset fs-1 text-primary"></i>
+                </div>
+                <h4>Suport dedicat</h4>
+                <p>Serviciu clienți 7 zile din 7</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Branduri populare -->
+<section id="branduri" class="mb-5">
+    <div class="section-header text-center mb-4">
+        <h2 class="display-5 fw-bold">Branduri populare</h2>
+        <div class="divider-toy my-3 mx-auto"></div>
+    </div>
+
+    <div class="brand-slider p-4 bg-light rounded-4">
+        <div class="row g-4 align-items-center text-center">
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 1" class="img-fluid">
+            </div>
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 2" class="img-fluid">
+            </div>
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 3" class="img-fluid">
+            </div>
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 4" class="img-fluid">
+            </div>
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 5" class="img-fluid">
+            </div>
+            <div class="col-4 col-md-2">
+                <img src="/api/placeholder/150/80" alt="Brand 6" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Aplicație mobilă -->
+<section id="app-promo" class="mb-5">
+    <div class="app-banner rounded-4 p-4" style="background-color: var(--accent-color);">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2 class="fw-bold mb-3">Descarcă aplicația Lumea Jucăriilor</h2>
+                <p class="fs-5 mb-4">Bucură-te de oferte exclusive, comandă rapid și urmărește livrarea direct de pe telefonul tău.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="#" class="btn btn-dark">
+                        <i class="fab fa-apple me-2"></i> App Store
+                    </a>
+                    <a href="#" class="btn btn-dark">
+                        <i class="fab fa-google-play me-2"></i> Google Play
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5 text-center mt-4 mt-md-0">
+                <img src="/api/placeholder/300/600" alt="Aplicație mobilă" class="img-fluid app-mockup">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stil personalizat pentru pagina de index -->
+
+
+@section Scripts {
+    <script>
+        // Inițializare carousel
+        var myCarousel = document.querySelector('#mainCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000,
+            wrap: true
+        });
+
+        // Script pentru animație la scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.category-card, .product-card, .benefit-card');
+
+            function checkVisibility() {
+                elements.forEach(element => {
+                    const position = element.getBoundingClientRect();
+                    if(position.top < window.innerHeight && position.bottom >= 0) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility();
+        });
+    </script>
+}
